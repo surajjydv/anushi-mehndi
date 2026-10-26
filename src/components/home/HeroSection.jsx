@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS_CONFIG } from "@/constants/businessConfig";
-import { ShieldCheck, MapPin, Sparkles, MessageCircle, Star, ArrowRight } from "lucide-react";
+import { ShieldCheck, MapPin, MessageCircle, Star, ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -15,10 +15,6 @@ export default function HeroSection() {
           
           {/* Left Column: Larger, crisp headline & primary actions */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-champagne-100/90 border border-champagne-300 text-champagne-950 text-xs sm:text-sm font-medium">
-              <Sparkles className="w-4 h-4 text-champagne-700" />
-              <span>Lucknow Bridal Henna Specialist • 100% Pure Sojat Henna</span>
-            </div>
 
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-stone-900 leading-[1.18]">
               Authentic Bridal Artistry,{" "}
