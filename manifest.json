@@ -1,0 +1,25 @@
+{
+  "name": "Anushka Yadav | Mehndi & Makeup Studio Lucknow",
+  "short_name": "Anushka Beauty",
+  "description": "Premium Bridal Mehndi & Professional Makeup Artist in Lucknow. Book appointments, explore packages and festive offers.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#210912",
+  "theme_color": "#7B112A",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["beauty", "lifestyle", "shopping"]
+}
