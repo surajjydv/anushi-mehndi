@@ -1,0 +1,42 @@
+export const COUPONS_DATA = {
+  KARWACHAUTH: {
+    code: "KARWACHAUTH",
+    type: "flat",
+    value: 500,
+    title: "₹500 Karwa Chauth Special",
+    desc: "Auspicious festive discount on all bridal & festive packages",
+    badge: "Festive Exclusive",
+  },
+  DIWALI50: {
+    code: "DIWALI50",
+    type: "flat",
+    value: 1000,
+    title: "₹1,000 Diwali Shubh Henna",
+    desc: "Valid on orders above ₹3,000 for family and bridal packages",
+    badge: "Diwali Offer",
+  },
+  BUDGET50: {
+    code: "BUDGET50",
+    type: "flat",
+    value: 50,
+    title: "₹50 Pocket Saver",
+    desc: "Direct discount on single-hand and budget both-hands henna",
+    badge: "Pocket Saver",
+  },
+  LUCKNOWBRIDE: {
+    code: "LUCKNOWBRIDE",
+    type: "flat",
+    value: 1500,
+    title: "₹1,500 Royal Bridal Off",
+    desc: "Special Lucknow wedding season privilege on premium packages",
+    badge: "Bridal Privilege",
+  },
+  EARLYBIRD15: {
+    code: "EARLYBIRD15",
+    type: "percent",
+    value: 15,
+    title: "15% Advance Booking",
+    desc: "Save 15% when confirming your wedding date 30+ days ahead",
+    badge: "Early Bird",
+  },
+};

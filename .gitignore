@@ -1,4 +1,8 @@
+node_modules/
+.next/
+out/
 .vercel
 Memory.md
 .DS_Store
 __pycache__/
+*.log

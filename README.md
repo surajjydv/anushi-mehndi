@@ -1,54 +1,96 @@
 # Anushka Yadav Bridal Mehndi Studio
 
-Live application: [https://mehn.vercel.app](https://mehn.vercel.app)
+Live Application: [mehn.vercel.app](https://mehn.vercel.app)
 
-A mobile-first web application and progressive web app (PWA) for Anushka Yadav, a bridal and festive henna artist based in Lucknow, India.
+A modern, responsive Next.js web application built for **Anushka Yadav (@anushi_mehndi)**, a premier bridal henna artist and makeup professional based in Lucknow, India.
 
-## Features
+---
 
-- **Mobile-First Experience**: Optimized layout for smartphone viewports with persistent bottom navigation, responsive header controls, and touch-friendly booking wizards.
-- **Direct UPI Payments**: Integrated UPI advance payment to `khusiet45@ybl` (Payee: Anushka Yadav) with one-click clipboard copying and direct `upi://pay` deep linking for Google Pay, PhonePe, Paytm, and BHIM.
-- **Clear Tiered Pricing**: Accessible packages starting at ₹299 (single hand palm) and ₹600 (both hands floral), alongside royal bridal henna (₹6,500), portrait sketch figures (₹9,000), and Rajasthani jaal (₹7,500).
-- **Instagram Portfolio**: Direct integration with [@anushi_mehndi](https://www.instagram.com/anushi_mehndi?rpxt=bHRrcGp1ZGg4dnNu) across all design showcases.
-- **Dedicated Makeup Studio**: Sub-department for HD airbrush and traditional bridal makeover packages.
-- **Festive Promotions**: Automated coupon system for Karwa Chauth (`KARWACHAUTH`) and Diwali (`DIWALI50`).
-- **Instant WhatsApp Booking**: Generates formatted booking requests sent directly to Anushka via WhatsApp with selected packages, dates, and locations.
-- **Lucknow Doorstep Service**: Coverage across Gomti Nagar, Hazratganj, Alambagh, Indira Nagar, Ashiyana, and surrounding areas.
+## Highlights
 
-## Architecture
+- **Multi-Page Architecture**: Dedicated routes for collections (`/designs`), festive promotions (`/offers`), live cost calculation & booking (`/book`), makeup artistry (`/makeup`), and studio background (`/about`).
+- **Interactive Price Calculator**: Live estimation engine factoring base packages, guest headcounts, add-ons (bridal feet, clove steam kits, doorstep lighting), and instant promo code discounts.
+- **Direct Checkout & Deep Linking**:
+  - One-click formatted WhatsApp appointment request generator.
+  - Direct UPI advance slot booking to `khusiet45@ybl` (Payee: Anushka Yadav) with deep links for PhonePe, GPay, Paytm, and BHIM.
+- **Curated Collections**: Front-and-center budget packages from ₹600 for both hands alongside royal Rajasthani heritage jaal, figure portraits, and Arabic fusion.
+- **Makeup Studio**: Dedicated department covering HD and luxury airbrush makeovers.
+- **Mobile-First Experience**: High-contrast typography, native bottom navigation on smartphones, and responsive desktop layout.
 
-```
-├── vercel.json      # Routing and cache-control headers
-├── index.html       # Semantic single-page application structure
-├── styles.css       # Mobile-first CSS tokens, media queries, and responsive components
-├── app.js           # Client-side router, price calculator, and UPI clipboard handler
-├── manifest.json    # Web App Manifest for Android/iOS home screen installation
-├── sw.js            # Service worker caching static assets for offline use
-├── images/          # Compressed high-resolution design photography
-└── icons/           # Progressive web app launcher icons
-```
+---
 
-## Setup
+## Tech Stack
 
-Run the project locally using any static file server:
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Library**: [React 18](https://react.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom Henna Maroon and Champagne design tokens
+- **Typography**: Playfair Display (Serif) & Plus Jakarta Sans via `next/font/google`
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Hosting**: [Vercel](https://vercel.com/)
 
-```bash
-# Python 3
-python -m http.server 8085
-```
+---
 
-Open `http://localhost:8085` in any browser or test responsive breakpoints via developer tools.
+## Getting Started
 
-## Deployment
+### Prerequisites
 
-Deploy changes to Vercel production:
+- Node.js 18.17+ or 20+
+- npm 9+
+
+### Installation
 
 ```bash
-npx vercel --prod --yes
+# Clone the repository
+git clone https://github.com/surajjydv/anushi-mehndi.git
+cd anushi-mehndi
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-## Usage
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-1. **Select Package**: Choose from budget designs (₹600 both hands), festive specials, or royal bridal collections.
-2. **Calculate Total**: Pick doorstep add-ons or apply seasonal discount codes (`KARWACHAUTH`, `DIWALI50`).
-3. **Lock Slot**: Pay a ₹500 advance via UPI (`khusiet45@ybl`) or confirm directly on WhatsApp.
+---
+
+## Project Structure
+
+```
+├── public/                 # Static imagery, icons, and web manifest
+├── src/
+│   ├── app/                # Next.js App Router pages
+│   │   ├── page.jsx        # Home portal
+│   │   ├── designs/        # Mehndi designs showcase
+│   │   ├── offers/         # Festive coupons & promotions
+│   │   ├── book/           # Pricing wizard & slot booking
+│   │   ├── makeup/         # Bridal makeup studio
+│   │   ├── about/          # Studio info & Lucknow coverage
+│   │   ├── layout.jsx      # Global root layout & font loading
+│   │   └── globals.css     # Tailwind imports and base styles
+│   ├── components/         # Modular feature components
+│   │   ├── common/         # Navbar, BottomNav, AnnouncementBar, Toast
+│   │   ├── home/           # HeroSection, HighlightsStrip, WhyChooseUs
+│   │   ├── mehndi/         # MehndiDesigns
+│   │   ├── offers/         # FestiveOffers
+│   │   ├── booking/        # BookingWizard, UpiPaymentSection
+│   │   └── footer/         # Footer
+│   ├── constants/          # Business config, services, and coupons
+│   ├── hooks/              # Custom calculator & UI hooks
+│   └── utils/              # Formatter and WhatsApp link builders
+├── tailwind.config.js      # Custom theme extensions
+└── next.config.js          # Next.js configuration
+```
+
+---
+
+## Production Build
+
+```bash
+# Build optimized production bundle
+npm run build
+
+# Start production server
+npm run start
+```
